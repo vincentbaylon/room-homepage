@@ -72,41 +72,104 @@ select {
 .product {
   display: flex;
   flex-direction: row;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .product__image-container {
     flex: 1; }
   .product__image {
-    height: 100%; }
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
   .product__text {
     width: 40%;
     padding: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem; }
+    gap: 1rem;
+    position: relative; }
     .product__text--heading {
       font-size: 2rem;
       font-weight: 600;
-      line-height: 1;
-      margin-bottom: 1rem; }
+      line-height: 1.1;
+      padding-bottom: 1rem; }
     .product__text--desc {
       font-size: 0.7rem;
       font-weight: 500;
-      color: var(--clr-dark-gray); }
+      color: var(--clr-dark-gray);
+      padding-bottom: 1rem; }
+
+.nav {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .nav__logo {
+    height: 100%; }
+  .nav__list {
+    display: flex;
+    list-style: none;
+    gap: 2rem; }
+  .nav__link, .nav__visited {
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--clr-white); }
+
+.dir-buttons-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--clr-black);
+  width: 25%;
+  height: 15%;
+  display: flex;
+  justify-content: space-around; }
+
+.dir-buttons {
+  background-color: transparent;
+  border: none; }
+
+.btn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row; }
+  .btn__shop-now {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    align-self: flex-start; }
+  .btn__arrow {
+    padding-left: 2rem; }
 
 .product-lower {
   display: flex;
   flex-direction: row; }
+  .product-lower__text {
+    padding: 2.5rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem; }
+    .product-lower__text--heading {
+      text-transform: uppercase;
+      letter-spacing: 0.2rem; }
+    .product-lower__text--desc {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--clr-dark-gray); }
+
+.image--lower {
+  width: 30%; }
 
 .container {
-  min-width: 100%;
-  max-width: 14.4rem;
   display: flex;
   flex-direction: column;
   align-items: center; }
 
 .main {
-  max-width: 100%; }
-  @media only screen and (min-width: 1440px) {
-    .main {
-      max-width: 60%; } }
+  max-width: 1440px; }

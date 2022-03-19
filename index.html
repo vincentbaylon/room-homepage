@@ -19,10 +19,30 @@
     <title>Frontend Mentor | Room homepage</title>
   </head>
   <body class="container">
-    <nav></nav>
-
     <main class="main">
       <div class="product">
+        <nav class="nav">
+          <img src="images/logo.svg" alt="room logo" class="nav__logo" />
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">home</a>
+              <div class="nav__underline"></div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">shop</a>
+              <div class="nav__underline"></div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">about</a>
+              <div class="nav__underline"></div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">contact</a>
+              <div class="nav__underline"></div>
+            </li>
+          </ul>
+        </nav>
         <div class="product__image-container">
           <img
             src="images/desktop-image-hero-1.jpg"
@@ -41,12 +61,20 @@
             our collection and make your property a reflection of you and what
             you love.
           </p>
-          <button class="btn__shop-now">Shop Now &rarr;</button>
-          <div class="dir-buttons">
-            <button class="dir-buttons--left">
+          <button class="btn btn__shop-now">
+            Shop Now
+            <img
+              src="images/icon-arrow.svg"
+              alt="right arrow icon"
+              class="btn__arrow"
+            />
+          </button>
+
+          <div class="dir-buttons-container">
+            <button class="dir-buttons dir-buttons--left">
               <img src="images/icon-angle-left.svg" alt="left arrow icon" />
             </button>
-            <button class="dir-buttons--right">
+            <button class="dir-buttons dir-buttons--right">
               <img src="images/icon-angle-right.svg" alt="right arrow icon" />
             </button>
           </div>
@@ -60,8 +88,8 @@
           class="image--lower"
         />
         <div class="product-lower__text">
-          <h3 class="product-lower__heading">About Our Furniture</h3>
-          <p class="product-lower__desc">
+          <h3 class="product-lower__text--heading">About Our Furniture</h3>
+          <p class="product-lower__text--desc">
             Our multifunctional collection blends design and function to suit
             your individual taste. Make each room unique, or pick a cohesive
             theme that best express your interests and what inspires you. Find
