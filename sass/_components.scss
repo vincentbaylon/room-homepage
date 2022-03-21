@@ -94,14 +94,14 @@
     height: 100%;
   }
 
-  &__hambuger {
+  &__hamburger {
     display: none;
 
     @media only screen and (max-width: 23.4375em) {
       display: inline-block;
-      position: absolute;
-      left: 0;
-      height: 100%;
+      // position: absolute;
+      // left: 0;
+      // height: 100%;
     }
   }
 
@@ -175,6 +175,16 @@
       color: var(--clr-black);
     }
   }
+}
+
+.backdrop {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--clr-black);
+  filter: opacity(0.6);
+  z-index: 90;
+  position: fixed;
 }
 
 .dir-buttons-container {

@@ -21,6 +21,8 @@ const image = document.querySelector(".product__image");
 const mobile = document.querySelector(".product__image--mobile");
 const heading = document.querySelector(".product__text--heading");
 const desc = document.querySelector(".product__text--desc");
+const menu = document.querySelector(".nav__menu");
+const backdrop = document.querySelector(".backdrop");
 
 // EVENT LISTENERS
 document.querySelector(".dir-buttons--right").addEventListener("click", () => {
@@ -45,6 +47,18 @@ document
 
 document.querySelector(".nav__hamburger").addEventListener("click", () => {
   openMenu();
+});
+
+document.querySelector(".nav__menu--close").addEventListener("click", () => {
+  closeMenu();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") {
+    changeImageRight();
+  } else if (e.key === "ArrowLeft") {
+    changeImageLeft();
+  }
 });
 
 // FUNCTIONS
@@ -101,7 +115,11 @@ function slideText() {
 }
 
 function openMenu() {
-  const menu = document.querySelector(".nav__menu");
-
   menu.style.display = "flex";
+  backdrop.style.display = "block";
+}
+
+function closeMenu() {
+  menu.style.display = "none";
+  backdrop.style.display = "none";
 }

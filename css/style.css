@@ -141,14 +141,11 @@ select {
       padding: 0rem 1.5rem; } }
   .nav__logo {
     height: 100%; }
-  .nav__hambuger {
+  .nav__hamburger {
     display: none; }
     @media only screen and (max-width: 23.4375em) {
-      .nav__hambuger {
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        height: 100%; } }
+      .nav__hamburger {
+        display: inline-block; } }
   .nav__list {
     display: flex;
     list-style: none;
@@ -197,6 +194,15 @@ select {
       font-size: 0.75rem;
       font-weight: 500;
       color: var(--clr-black); }
+
+.backdrop {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--clr-black);
+  filter: opacity(0.6);
+  z-index: 90;
+  position: fixed; }
 
 .dir-buttons-container {
   position: absolute;
